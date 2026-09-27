@@ -20,4 +20,10 @@ This effort is being developed in the context of an upgrade to <https://github.c
 
 ## Deploy
 
-Pull this repo to some convenient location and run `./deploy-inventory.sh`.
+Using the shell script. Pull this repo to some convenient location (on the target host) and run `./deploy-inventory.sh`.
+
+Using Ansible. Pull this repo to a host that has Ansible installed and run the following playbook which will deploy the inventory file to all hosts in the inventory that have Ansible installed and available on the command line. (If Ansible is in a VM or container, it will probably not work unless the container or VM is listed in the inventory. Not tested.)
+
+```text
+ansible-playbook deploy-inventory.yml -i inventory -K
+```

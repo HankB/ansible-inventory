@@ -1,0 +1,32 @@
+---
+
+# Copy the inventory file to any hosts in the inventory file that
+# have Ansible installed
+# Starting point courtesy of Google search.
+
+- hosts: all
+  tasks:
+    - name: Check if ansible is installed on the target
+      ansible.builtin.raw: which ansible
+      register: ansible_check
+      ignore_errors: yes
+      changed_when: false
+
+    - name: prepare and copy inventory
+      block:
+        
+        - name: Create the remote directory
+          ansible.builtin.file:
+            path: //etc/ansible
+            state: directory
+            mode: '0755'
+            owner: root
+            group: root
+            
+        - name: Copy file if ansible is present on the target
+          ansible.builtin.copy:
+            src: inventory
+            dest: /etc/ansible/inventory
+  
+      when: ansible_check.rc == 0
+      become: true
