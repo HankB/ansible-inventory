@@ -2,6 +2,8 @@
 
 Provide a global Ansible inventory file.
 
+**AI/LLM warning** See Errata for more.
+
 ## Motivation
 
 I have a number of Git repos that include Ansible playbooks and have typically put the inventory file in the same directory as the playbooks (and included or not in Git.) This does not provide a good way to manage inventory. 
@@ -27,3 +29,7 @@ Using Ansible. Pull this repo to a host that has Ansible installed and run the f
 ```text
 ansible-playbook deploy-inventory.yml -i inventory -K
 ```
+
+## Errata
+
+* The Ansible playbook was written by me (starting with the reply to a "google search") and then reviewed by Github copilot. It took surprisingly more iterations before the playbook was satisfactory. While adding "good stuff" Copilot also took out things I wanted (like the comments abd block directive.) If you object ti AI/LLM usage for code development, be warned.
