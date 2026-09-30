@@ -1,12 +1,8 @@
-# Ansible inventory for SMART drive statistics collection.
+# Ansible inventory for SMART drive statistics.
 
 [smart_report_hosts]
-# Hosts that run record-drive-stats.sh.
 oak
-olive
-piserver
+dragohost
 
 [smart_collectors]
-# Hosts that run collect-drive-stats.sh.
 oak
-pilog3b
