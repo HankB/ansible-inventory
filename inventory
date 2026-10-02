@@ -3,6 +3,16 @@
 [smart_report_hosts]
 oak
 dragohost
+olive
+piserver
+glencoe
+rafiki
+charon
+trixi
+pilog3b
+ester
+rocinante
 
 [smart_collectors]
 oak
+piserver
