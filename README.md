@@ -20,6 +20,14 @@ This effort is being developed in the context of an upgrade to <https://github.c
 
 * 2026-09-27 inventory and helper script
 
+## Usage
+
+```text
+ansible-playbook -i /etc/ansible/inventory -l [some group or host] ...
+```
+
+There are other ways to specify the inventrory file. See issue #1 for a fix to simplify the command line.
+
 ## Deploy
 
 Using the shell script. Pull this repo to some convenient location (on the target host) and run `./deploy-inventory.sh`.
