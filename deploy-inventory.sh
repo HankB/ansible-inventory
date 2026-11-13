@@ -10,4 +10,4 @@ set -o nounset
 
 git pull
 sudo mkdir -p /etc/ansible # Not guaranteed for every Ansible installation
-sudo cp inventory /etc/ansible/inventory
+sudo cp hosts /etc/ansible/hosts

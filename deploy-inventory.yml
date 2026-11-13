@@ -1,6 +1,6 @@
 ---
 
-# Copy the inventory file to any hosts in the inventory file that
+# Copy the inventory file (hosts) to any hosts in the inventory file that
 # have Ansible installed
 # Starting point courtesy of Google search.
 
@@ -24,8 +24,8 @@
 
         - name: Copy inventory to the global Ansible location
           ansible.builtin.copy:
-            src: "{{ playbook_dir }}/inventory"
-            dest: /etc/ansible/inventory
+            src: "{{ playbook_dir }}/hosts"
+            dest: /etc/ansible/hosts
             owner: root
             group: root
             mode: "0644"
