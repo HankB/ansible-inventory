@@ -16,3 +16,10 @@ rocinante
 [smart_collectors]
 oak
 piserver
+
+[ansible_capable]
+olive
+oak
+rafiki
+trixi
+rocinante

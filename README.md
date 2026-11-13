@@ -26,7 +26,7 @@ This effort is being developed in the context of an upgrade to <https://github.c
 ansible-playbook -i /etc/ansible/inventory -l [some group or host] ...
 ```
 
-There are other ways to specify the inventrory file. See issue #1 for a fix to simplify the command line.
+There are other ways to specify the inventory file. See issue #1 for a fix to simplify the command line.
 
 ## Deploy
 
